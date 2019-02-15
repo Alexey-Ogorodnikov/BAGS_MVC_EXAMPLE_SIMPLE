@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="products_padding">10dp</dimen>
+    <dimen name="products_text_padding">20dp</dimen>
+    <dimen name="products_text_size">20sp</dimen>
+    <dimen name="wish_list_subtotal_text_size">25sp</dimen>
+    <dimen name="wish_list_shipping_text_size">16sp</dimen>
+    <dimen name="wish_list_margin">20dp</dimen>
+    <dimen name="product_catalog_margin">5dp</dimen>
+    <dimen name="product_catalog_padding">10dp</dimen>
+    <dimen name="product_image_width">140dp</dimen>
+    <dimen name="product_image_height">120dp</dimen>
+    <dimen name="product_title">14sp</dimen>
+    <dimen name="product_details_padding">20dp</dimen>
+    <dimen name="product_details_margin">20dp</dimen>
+</resources>

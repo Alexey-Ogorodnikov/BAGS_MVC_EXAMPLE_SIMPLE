@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Bags example mvc</string>
+    <string name="product_title">Product catalogue</string>
+
+    <string name="product_wish_list">Your wish list</string>
+    <string name="product_wish_list_total">Total $ %1$s</string>
+    <string name="product_wish_list_subtotal">Subtotal</string>
+    <string name="product_wish_list_subtotal_price">$ %1$s</string>
+    <string name="product_shipping">Free Shipping World Wide</string>
+    <string name="product_wish_list_checkout">Proceed to check out</string>
+    <string name="product_wish_list_checkout_message">Are you sure you want to proceed to checkout?</string>
+    <string name="product_wish_list_add">Add to wish list</string>
+    <string name="product_wish_list_remove">Remove from wish list</string>
+</resources>

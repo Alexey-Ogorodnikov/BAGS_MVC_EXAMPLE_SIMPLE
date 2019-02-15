@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:background="@color/grayE"
+        android:layout_height="match_parent">
+
+    <android.support.constraint.ConstraintLayout
+            android:id="@+id/main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/grayC">
+
+        <TextView
+                android:id="@+id/products_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/product_title"
+                android:textSize="@dimen/products_text_size"
+                android:textColor="@color/black"
+                android:paddingStart="@dimen/products_text_padding"
+                android:paddingTop="@dimen/products_text_padding"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+        <android.support.v7.widget.RecyclerView
+                android:id="@+id/productCatalogRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/products_padding"
+                app:layout_constraintTop_toBottomOf="@id/products_title"
+                app:layout_constraintStart_toStartOf="@+id/products_title"/>
+
+        <android.support.constraint.ConstraintLayout
+                android:id="@+id/wish_list_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/grayE"
+                app:layout_constraintTop_toBottomOf="@id/productCatalogRecyclerView"
+                app:layout_constraintStart_toStartOf="@+id/productCatalogRecyclerView"
+                app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="0">
+
+            <TextView
+                    android:id="@+id/wish_list_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/product_wish_list"
+                    android:textSize="@dimen/products_text_size"
+                    android:textColor="@color/black"
+                    android:padding="@dimen/products_text_padding"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                    android:id="@+id/wish_list_total"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/product_wish_list_total"
+                    android:textSize="@dimen/products_text_size"
+                    android:textColor="@color/black"
+                    android:padding="@dimen/products_text_padding"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+            <android.support.v7.widget.RecyclerView
+                    android:id="@+id/wishListRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="@+id/wish_list_subtotal"
+                    app:layout_constraintTop_toBottomOf="@+id/wish_list_title" android:paddingBottom="40dp"
+                    android:paddingEnd="10dp" android:paddingLeft="10dp" android:paddingRight="10dp"
+                    android:paddingStart="10dp" android:paddingTop="20dp" app:layout_constraintVertical_bias="0"/>
+
+            <View
+                    android:id="@+id/product_details_separator"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    app:layout_constraintTop_toBottomOf="@id/wishListRecyclerView"
+                    android:background="@color/white"/>
+
+
+            <TextView
+                    android:id="@+id/wish_list_subtotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/product_wish_list_subtotal"
+                    android:textSize="@dimen/wish_list_subtotal_text_size"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:padding="@dimen/products_text_padding"
+                    app:layout_constraintTop_toBottomOf="@id/wishListRecyclerView"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/wish_list_subtotal_price"
+                    app:layout_constraintHorizontal_chainStyle="packed"/>
+
+            <TextView
+                    android:id="@+id/wish_list_subtotal_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/product_wish_list_subtotal_price"
+                    android:textSize="@dimen/wish_list_subtotal_text_size"
+                    android:textColor="@color/black"
+                    android:padding="@dimen/products_text_padding"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintTop_toBottomOf="@id/wishListRecyclerView"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/wish_list_subtotal"
+            />
+
+            <TextView
+                    android:id="@+id/wish_list_shipping"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/product_shipping"
+                    android:textSize="16sp"
+                    android:textColor="@color/colorPrimary"
+                    android:padding="@dimen/products_text_padding"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintTop_toBottomOf="@+id/wish_list_subtotal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+            <Button
+                    android:id="@+id/checkout_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/product_wish_list_checkout"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:backgroundTint="@android:color/holo_red_light"
+                    android:textSize="20sp"
+                    android:padding="@dimen/products_text_padding"
+                    android:layout_marginBottom="@dimen/wish_list_margin"
+                    app:layout_constraintTop_toBottomOf="@+id/wish_list_shipping"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+        </android.support.constraint.ConstraintLayout>
+    </android.support.constraint.ConstraintLayout>
+</android.support.v4.widget.NestedScrollView>
